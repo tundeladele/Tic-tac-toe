@@ -1,5 +1,3 @@
-# Tic-tac-toe
-This is afor a tic tac toe game version
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +13,7 @@ namespace wf_tictactoe
     public partial class Form1 : Form
     {
         bool turn = true; // when i is treu, its x's turn and false is O's turn
-        //int turn_count = 0; 
+        int turn_count = 0; 
 
         public Form1()
         {
@@ -34,7 +32,7 @@ namespace wf_tictactoe
 
         private void button_Click(object sender, EventArgs e)
         {
-           // turn_count++;
+            turn_count++;
             Button b = (Button)sender;
             if (turn) b.Text = "X"; // this means that if turn then let the button shows "X"
 
@@ -76,7 +74,7 @@ namespace wf_tictactoe
                 there_is_a_winner = true;
 
             //draw scenario
-            //else { if (turn_count == 9) MessageBox.Show("it was a draw");
+            else { if (turn_count == 9) MessageBox.Show("it was a draw");
                     
             //            }
 
